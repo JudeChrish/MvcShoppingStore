@@ -1,0 +1,8 @@
+﻿@model IEnumerable<string>
+
+@Html.ActionLink("Home", "AllProducts","Product",null, new { @class = "btn btn-block btn-default btn-lg"})
+
+@foreach (var menu in Model)
+{
+    @Html.RouteLink(menu, new { Controller = "Product", Action = "AllProducts", CurrCategory = menu, page = 1 }, new {@class = "btn btn-block btn-default btn-lg" } );
+}
