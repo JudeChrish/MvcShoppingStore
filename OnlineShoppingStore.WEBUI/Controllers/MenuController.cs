@@ -16,9 +16,9 @@ namespace OnlineShoppingStore.WEBUI.Controllers
             Repo = ProdRepo;
         }
         // GET: Menu
-        public PartialViewResult Menu(string category)
+        public PartialViewResult Menu(string CurrCategory = null)
         {
-            ViewBag.SelectedCateory = category;
+            ViewBag.SelectedCategory = CurrCategory;
             IEnumerable<string> Categories = Repo.Products.Select(c => c.Category).Distinct().OrderBy(x => x);
             return PartialView(Categories);
         }

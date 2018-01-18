@@ -13,11 +13,11 @@ namespace OnlineShoppingStore.WEBUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes.MapRoute(
-            //  name: "Custom1",
-            //  url: "{CurrCategory}",
-            //  defaults: new { controller = "Product", action = "AllProducts", CurrCategory = "MEN", Page = 1 }
-            //  );
+            routes.MapRoute(
+              name: "Custom1",
+              url: "{CurrCategory}",
+              defaults: new { controller = "Product", action = "AllProducts", CurrCategory = "MEN", Page = 1 }
+              );
 
             routes.MapRoute(
                 name: "Default",
