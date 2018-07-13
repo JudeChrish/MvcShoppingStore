@@ -14,6 +14,7 @@ namespace OnlineShoppingStore.WEBUI.Controllers
     {
         private IProductRepository repository;
         private Carthelper CartHelper;
+        private string testc;
         
         public CartController(IProductRepository productRepository)
         {
